@@ -24,7 +24,7 @@ jobs:
     - 
       name: app version
       run: |
-        echo "1.0.0" >> $GITHUB_ENV
+        echo "app_ver=1.0.0" >> $GITHUB_ENV
 
     -
       name: Set up QEMU
