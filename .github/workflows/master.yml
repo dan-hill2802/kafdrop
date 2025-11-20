@@ -75,6 +75,6 @@ jobs:
       name: publish chart to GitHub packages
 #      if: ${{ ! endsWith( env.app_ver, '-SNAPSHOT' ) }}
       run: |
-        helm dependency build charts/mychart
+        helm dependency build charts/kafdrop
         helm package charts/kafdrop --version "$app_ver"
         helm push "kafdrop-$app_ver.tgz" oci://ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts
