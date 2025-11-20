@@ -74,7 +74,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     -
       name: publish chart to GitHub packages
-      if: ${{ ! endsWith( env.app_ver, '-SNAPSHOT' ) }}
+#      if: ${{ ! endsWith( env.app_ver, '-SNAPSHOT' ) }}
       run: |
         helm dependency build charts/mychart
         helm package charts/kafdrop --version "$app_ver"
